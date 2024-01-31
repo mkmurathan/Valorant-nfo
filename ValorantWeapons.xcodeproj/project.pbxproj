@@ -23,7 +23,6 @@
 		E968668E2B49D4CC0012C277 /* ValorantFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E968668B2B49D4CC0012C277 /* ValorantFont.ttf */; };
 		E969D91F2B642BEB002B5942 /* mapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E969D91E2B642BEB002B5942 /* mapView.swift */; };
 		E969D9212B642E61002B5942 /* mapDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E969D9202B642E61002B5942 /* mapDetailView.swift */; };
-		E97A33DC2B2D141100D10A84 /* deneme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97A33DB2B2D141100D10A84 /* deneme.swift */; };
 		E97A33DE2B2DCF0900D10A84 /* agentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97A33DD2B2DCF0900D10A84 /* agentViewModel.swift */; };
 		E97A33E02B2DCF2000D10A84 /* agentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97A33DF2B2DCF2000D10A84 /* agentService.swift */; };
 		E97A33E42B2E163B00D10A84 /* mapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97A33E32B2E163B00D10A84 /* mapService.swift */; };
@@ -73,7 +72,6 @@
 		E968668B2B49D4CC0012C277 /* ValorantFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ValorantFont.ttf; sourceTree = "<group>"; };
 		E969D91E2B642BEB002B5942 /* mapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapView.swift; sourceTree = "<group>"; };
 		E969D9202B642E61002B5942 /* mapDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapDetailView.swift; sourceTree = "<group>"; };
-		E97A33DB2B2D141100D10A84 /* deneme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deneme.swift; sourceTree = "<group>"; };
 		E97A33DD2B2DCF0900D10A84 /* agentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = agentViewModel.swift; sourceTree = "<group>"; };
 		E97A33DF2B2DCF2000D10A84 /* agentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = agentService.swift; sourceTree = "<group>"; };
 		E97A33E32B2E163B00D10A84 /* mapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapService.swift; sourceTree = "<group>"; };
@@ -136,9 +134,10 @@
 		E92452212B08D4E100AD2AC0 /* ValorantWeapons */ = {
 			isa = PBXGroup;
 			children = (
+				E924524D2B08D50B00AD2AC0 /* Model */,
 				E968668B2B49D4CC0012C277 /* ValorantFont.ttf */,
 				E92452562B08D80300AD2AC0 /* ViewModel */,
-				E924524D2B08D50B00AD2AC0 /* Model */,
+				E97E2D812B6AE09300B24EAB /* extension */,
 				E924524F2B08D51700AD2AC0 /* Service */,
 				E924524E2B08D51100AD2AC0 /* View */,
 				E924524C2B08D4FB00AD2AC0 /* app */,
@@ -177,6 +176,7 @@
 			children = (
 				E92452262B08D4E200AD2AC0 /* Assets.xcassets */,
 				E92452222B08D4E100AD2AC0 /* ValorantWeaponsApp.swift */,
+				E98998EE2B3EF60300975EE7 /* firstPage.swift */,
 			);
 			path = app;
 			sourceTree = "<group>";
@@ -194,17 +194,9 @@
 		E924524E2B08D51100AD2AC0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E92452592B090E0900AD2AC0 /* WeaponView.swift */,
-				E99304712B4ECC6A00872FE7 /* MenuButton.swift */,
-				E94979A82B4D58D200CC99FD /* weaponDetail.swift */,
-				E97A33DB2B2D141100D10A84 /* deneme.swift */,
-				E968667E2B462E820012C277 /* Color+Hex.swift */,
-				E98998EC2B3EEE6200975EE7 /* TabBar.swift */,
-				E98998EE2B3EF60300975EE7 /* firstPage.swift */,
-				E98998F42B43681A00975EE7 /* agentScroll.swift */,
-				E97A33E92B308FB400D10A84 /* agentDetail.swift */,
-				E969D91E2B642BEB002B5942 /* mapView.swift */,
-				E969D9202B642E61002B5942 /* mapDetailView.swift */,
+				E97E2D832B6AE11100B24EAB /* map */,
+				E97E2D822B6AE0F700B24EAB /* agent */,
+				E97E2D802B6AE08000B24EAB /* Weapon */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -227,6 +219,43 @@
 				E97A33E72B2E170F00D10A84 /* mapViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E97E2D802B6AE08000B24EAB /* Weapon */ = {
+			isa = PBXGroup;
+			children = (
+				E94979A82B4D58D200CC99FD /* weaponDetail.swift */,
+				E92452592B090E0900AD2AC0 /* WeaponView.swift */,
+			);
+			path = Weapon;
+			sourceTree = "<group>";
+		};
+		E97E2D812B6AE09300B24EAB /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				E98998EC2B3EEE6200975EE7 /* TabBar.swift */,
+				E968667E2B462E820012C277 /* Color+Hex.swift */,
+				E99304712B4ECC6A00872FE7 /* MenuButton.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		E97E2D822B6AE0F700B24EAB /* agent */ = {
+			isa = PBXGroup;
+			children = (
+				E98998F42B43681A00975EE7 /* agentScroll.swift */,
+				E97A33E92B308FB400D10A84 /* agentDetail.swift */,
+			);
+			path = agent;
+			sourceTree = "<group>";
+		};
+		E97E2D832B6AE11100B24EAB /* map */ = {
+			isa = PBXGroup;
+			children = (
+				E969D91E2B642BEB002B5942 /* mapView.swift */,
+				E969D9202B642E61002B5942 /* mapDetailView.swift */,
+			);
+			path = map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,7 +394,6 @@
 				E97A33E42B2E163B00D10A84 /* mapService.swift in Sources */,
 				E99304722B4ECC6A00872FE7 /* MenuButton.swift in Sources */,
 				E92452582B08D81700AD2AC0 /* weaponService.swift in Sources */,
-				E97A33DC2B2D141100D10A84 /* deneme.swift in Sources */,
 				E97A33EA2B308FB400D10A84 /* agentDetail.swift in Sources */,
 				E97A33E82B2E170F00D10A84 /* mapViewModel.swift in Sources */,
 				E97A33E62B2E16ED00D10A84 /* mapModel.swift in Sources */,
