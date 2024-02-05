@@ -21,7 +21,6 @@ class WeaponViewModel: ObservableObject {
                 print("Weapon Stats:")
                 print("  Fire Rate: \(weaponStats.fireRate)")
                 print("  Magazine Size: \(weaponStats.magazineSize)")
-                // Diğer özellikleri ekleyebilirsiniz...
             } else {
                 print("Weapon Stats: Nil")
             }
@@ -70,7 +69,6 @@ class WeaponViewModel: ObservableObject {
             do {
                 await weaponservice.requestData()
                 
-                // Veriyi ana thread üzerinde güncelle
                 DispatchQueue.main.async {
                     self.weapons = self.weaponservice.weapons
                     print("weapons fetched successfully")

@@ -21,7 +21,6 @@ class weaponService: ObservableObject {
             let decodedData = try JSONDecoder().decode(Weapon.self  , from: data)
             DispatchQueue.main.async {
                 self.weapons = decodedData.data
-                //for fetch data control
                 
                 
             }
@@ -29,7 +28,6 @@ class weaponService: ObservableObject {
             
             print("Error: \(error)")
                     
-                    // Hatanın türüne göre özel bir işlem yapabilirsiniz
                     if let decodingError = error as? DecodingError {
                         switch decodingError {
                         case .dataCorrupted(let context):
@@ -44,7 +42,6 @@ class weaponService: ObservableObject {
                             print("Unknown Error")
                         }
                     } else {
-                        // Diğer hata türleri için genel bir mesaj yazdırabilirsiniz
                         print("An unknown error occurred.")
                     }
 

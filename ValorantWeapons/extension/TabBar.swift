@@ -14,20 +14,27 @@ struct TabBar: View {
             mapView()
                 .tabItem {
                     Image(systemName: "1.circle")
-                    Text("First Tab")
+                    Text("MAPS")
                 }.tag(0)
             
             WeaponScroll()
                 .tabItem {
                     Image(systemName: "2.circle")
-                    Text("Second Tab")
+                    Text("WEAPONS")
                 }.tag(1)
             
             agentScroll()
                 .tabItem {
                     Image(systemName: "3.circle")
-                    Text("Third Tab")
+                    Text("AGENTS")
                 }.tag(2)
+            
+            settings()
+                .tabItem {
+                    Image(systemName: "4.circle")
+                    Text("SETTİNGS")
+                }.tag(2)
+            
             
         } .accentColor(Color.red) // Seçilen tab için renk
                         .onAppear {

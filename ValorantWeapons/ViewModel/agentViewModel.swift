@@ -47,7 +47,6 @@ class agentViewModel: ObservableObject {
             do {
                 await AgentService.requestData()
                 
-                // Veriyi ana thread üzerinde güncelle
                 DispatchQueue.main.async {
                     self.agents = self.AgentService.agents
                     print("Agents fetched successfully")

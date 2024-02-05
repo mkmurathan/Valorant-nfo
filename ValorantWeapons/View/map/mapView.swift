@@ -93,7 +93,7 @@ struct mapView: View {
                   
                         .onAppear {
                         Task {
-                            await viewModel.getMaps()  // Harita verilerini almak için buraya eklendi
+                            await viewModel.getMaps()  
                         }
                     }
              

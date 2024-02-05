@@ -8,6 +8,7 @@
 import SwiftUI
 
 
+
 extension Color {
     init(hex string: String) {
         var string: String = string.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
@@ -15,17 +16,14 @@ extension Color {
             _ = string.removeFirst()
         }
 
-        // Double the last value if incomplete hex
         if !string.count.isMultiple(of: 2), let last = string.last {
             string.append(last)
         }
 
-        // Fix invalid values
         if string.count > 8 {
             string = String(string.prefix(8))
         }
 
-        // Scanner creation
         let scanner = Scanner(string: string)
 
         var color: UInt64 = 0

@@ -74,7 +74,33 @@ struct MapDetailMapView: View {
                             .font(.title3)
                             .bold()
                         
-                    
+                        Spacer()
+                        
+                        Text("Type of sites on map")
+                            .foregroundStyle(.red)
+                            .bold()
+                            .font(.title2)
+                        
+                        Text(maps.tacticalDescription ?? "")
+                            .foregroundStyle(.white)
+                        
+                        Spacer()
+                      
+                       
+                       
+                        ZStack{
+                          
+                            mapImageView(url: URL(string: maps.displayIcon ?? ""))
+                                .scaledToFit()
+                            
+                            Text("Tactical view")
+                                .padding(EdgeInsets(top: 0, leading: 200, bottom: 350, trailing: 20))
+                                .font(.title2)
+                                .foregroundStyle(.red)
+                            
+                        }
+                        
+                        
                     }
                
                 }
@@ -104,7 +130,7 @@ struct MapDetailMapView: View {
             }
         })
        
-        .navigationBarBackButtonHidden(true) // Hide default button
+        .navigationBarBackButtonHidden(true) 
         
         
         

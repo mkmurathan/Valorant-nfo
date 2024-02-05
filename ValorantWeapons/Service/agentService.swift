@@ -19,13 +19,11 @@ class agentService: ObservableObject {
             let decodedData = try JSONDecoder().decode(Agent.self  , from: data)
             DispatchQueue.main.async {
                 self.agents = decodedData.data
-                //for fetch data control 
             }
         } catch {
             
             print("Error: \(error)")
                     
-                    // Hatanın türüne göre özel bir işlem yapabilirsiniz
                     if let decodingError = error as? DecodingError {
                         switch decodingError {
                         case .dataCorrupted(let context):
@@ -40,7 +38,6 @@ class agentService: ObservableObject {
                             print("Unknown Error")
                         }
                     } else {
-                        // Diğer hata türleri için genel bir mesaj yazdırabilirsiniz
                         print("An unknown error occurred.")
                     }
 
